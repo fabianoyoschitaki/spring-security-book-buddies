@@ -17,8 +17,8 @@ public class BookbuddiesApplication {
 
 	@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping("/books")
-	public Map home() {
-		Map model = new HashMap();
+	public Map<String, Book[]> home() {
+		Map<String, Book[]> model = new HashMap<String, Book[]>();
 		model.put("content", getListOfBooks());
 		return model;
 	}

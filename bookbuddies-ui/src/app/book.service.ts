@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +10,9 @@ export class BookService {
 
   getBooks(){
     const url = 'http://localhost:8080/books';
-    return this.http.get(url);
+    const headers = new HttpHeaders({
+      Authorization: 'Basic ' + btoa('fabianoyoschitaki:teste123')
+    });
+    return this.http.get(url, {headers});
   }
 }
