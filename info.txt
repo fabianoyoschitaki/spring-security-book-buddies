@@ -1,0 +1,1 @@
+https://examples.javacodegeeks.com/enterprise-java/spring/security-spring/spring-security-angular-6-basic-authentication-example/
